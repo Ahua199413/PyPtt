@@ -802,7 +802,6 @@ def crawl_board_with_condition():
 
 
 def get_user():
-
     test_user = [
         # 暱稱有特殊字元
         'for40255',
@@ -857,12 +856,12 @@ def push():
     # 短推文
     # content = '安安'
     # 連續重複推文
-#     content = '''安安
-# 安安
-# 安安
-# 安安
-# 安安
-#     '''
+    #     content = '''安安
+    # 安安
+    # 安安
+    # 安安
+    # 安安
+    #     '''
 
     testround: int = 3
     for (board, index) in test_post_list:
@@ -1140,7 +1139,6 @@ def set_board_title():
 
 
 def mark_post():
-
     board = 'CodingMan'
     mark_type = PTT.data_type.mark_type.S
 
@@ -2049,12 +2047,25 @@ github: https://tinyurl.com/umqff3v
 
         ptt_bot.logout()
     else:
+
+        cols = 100
+        rows = 200
+
+        s = f'{int(cols / 256)}'
+
+        print(s)
+
+        # (, cols % 256, int(rows / 256), rows % 256)
+
+
+        # print('sdjflksdjf')
+        sys.exit()
         ptt_id, password = get_password('Account3.txt')
         try:
             # init()
             # threading_test()
             ptt_bot = PTT.API(
-                # log_level=PTT.log.level.TRACE,
+                log_level=PTT.log.level.TRACE,
                 # log_level=PTT.log.level.DEBUG,
                 # host=PTT.data_type.host_type.PTT2
 
